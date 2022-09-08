@@ -16,7 +16,13 @@ sudo apt install ros-$ROS_DISTRO-driver-base
 sudo apt install ros-$ROS_DISTRO-ackermann-msgs
 sudo apt install ros-$ROS_DISTRO-rtabmap-ros
 sudo apt install ros-$ROS_DISTRO-teb-local-planner
+sudo apt install ros-$ROS_DISTRO-slam-gmapping
+sudo apt install ros-$ROS_DISTRO-map-server
+sudo apt install ros-$ROS_DISTRO-move-base
+sudo apt install ros-$ROS_DISTRO-global-planner
 
+sudo apt install libsdl1.2-dev
+sudo apt install libsdl-image1.2-dev
 sudo apt install tcl-dev tk-dev python3-tk
 ```
 
@@ -32,7 +38,7 @@ mkdir -p ~/racecar_ws/src
 2. git clone and compile it
 ```bash
 cd ~/racecar_ws/src
-git clone https://github.com/soonuse/racecar.git
+git clone https://github.com/star2dust/racecar.git
 cd ..
 catkin_make
 ```
@@ -86,7 +92,7 @@ roslaunch racecar_gazebo racecar_rviz.launch
 
 ![3](https://user-images.githubusercontent.com/26653172/170944487-3984d093-f43e-429a-95ac-0cd4114e5fc1.png)
 
-3. Click `2D Nav Goal` then click the goal on the rviz map (hold down the cursor to set the goal pose)
+3. Click `2D Nav Goal` (purple arrow) then click the goal on the rviz map (hold down the cursor to set the goal pose)
 
 4. Start the navigation script
 ```bash
